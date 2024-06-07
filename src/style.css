@@ -1,0 +1,139 @@
+:root {
+  --Red: hsl(0, 100%, 68%);
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+}
+.font {
+  font-weight: 400 !important;
+  font-family: "Barlow", sans-serif;
+}
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 30px;
+  overflow-x: hidden;
+}
+.bg {
+  background-color: var(--Light-Grayish-Blue);
+  width: 50%;
+  height: 50%;
+  border-bottom-left-radius: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+nav {
+  height: 10vh;
+  width: 100%;
+  padding-inline: 20px;
+  justify-content: space-between;
+  .button {
+    display: none;
+  }
+  img {
+    height: 70%;
+  }
+  ul {
+    height: 100%;
+    span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--Grayish-Blue);
+      margin-inline: 30px;
+    }
+    li {
+      list-style-type: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      margin-right: 15px;
+      &:hover {
+        cursor: pointer;
+        transition: 0.4s;
+        text-decoration: underline;
+      }
+      &:last-child {
+        color: var(--Grayish-Blue);
+        margin-right: 0px;
+      }
+      &:nth-last-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+main {
+  display: flex;
+  width: 100%;
+  height: calc(90vh - 60px);
+  > aside {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    img {
+      margin: auto;
+      width: 100%;
+    }
+  }
+  > section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > div {
+      text-transform: uppercase;
+      span:first-child {
+        padding: 3px 9px;
+        border-radius: 20px;
+        background-color: var(--Very-Dark-Blue);
+        color: white;
+        margin-right: 10px;
+      }
+      span:last-child {
+        letter-spacing: 3px;
+        color: var(--Grayish-Blue);
+      }
+      button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        background-color: var(--Red);
+        color: white;
+        border: none;
+        outline: none;
+        margin-right: 30px;
+      }
+      p {
+        color: var(--Grayish-Blue);
+        word-spacing: 3px;
+      }
+    }
+    > p {
+      margin-block: 40px;
+      color: var(--Grayish-Blue);
+      width: 200px;
+    }
+    h1 {
+      font-size: 70px;
+      width: 500px;
+      color: var(--Very-Dark-Blue);
+      font-weight: 700;
+    }
+  }
+}
